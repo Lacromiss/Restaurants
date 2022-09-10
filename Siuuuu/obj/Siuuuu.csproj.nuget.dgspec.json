@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\source\\repos\\Siuuuu\\Siuuuu\\Siuuuu.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\Siuuuu\\Siuuuu\\Siuuuu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\source\\repos\\Siuuuu\\Siuuuu\\Siuuuu.csproj": {
+    "C:\\Users\\Acer\\Desktop\\Siuuuu\\Siuuuu\\Siuuuu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\source\\repos\\Siuuuu\\Siuuuu\\Siuuuu.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Siuuuu\\Siuuuu\\Siuuuu.csproj",
         "projectName": "Siuuuu",
-        "projectPath": "C:\\Users\\Acer\\source\\repos\\Siuuuu\\Siuuuu\\Siuuuu.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\Siuuuu\\Siuuuu\\Siuuuu.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\source\\repos\\Siuuuu\\Siuuuu\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\Siuuuu\\Siuuuu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,26 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.27, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

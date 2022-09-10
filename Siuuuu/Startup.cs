@@ -1,9 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Siuuuu.DAL;
+using Siuuuu.Models.Account;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +28,27 @@ namespace Siuuuu
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            string Musiii = Configuration.GetConnectionString("default");
+            services.AddDbContext<AppDbContext>(optt =>
+            {
+                optt.UseSqlServer(Musiii);
+            });
+            services.AddIdentity<AppUser, IdentityRole>()
+                           .AddEntityFrameworkStores<AppDbContext>()
+                           .AddDefaultTokenProviders();
+            services.Configure<IdentityOptions>(opt =>
+            {
+                opt.Password.RequireDigit = true;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireLowercase = true;
+                opt.Password.RequireUppercase = true;
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(3);
+
+            });
+            services.ConfigureApplicationCookie(opt =>
+            {
+                opt.LoginPath = "/Login/Login";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
