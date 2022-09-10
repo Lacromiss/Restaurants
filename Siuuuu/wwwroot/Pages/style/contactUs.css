@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../image/background.jpg) center center fixed;
+    background-size:cover ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ 
+
+
+
+
+  form {
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:60px;
+    position:relative;
+    z-index:1;
+    width: 100%;
+    border: none;
+    margin-top: -20px;
+  }
+  
+  form > div{
+    position:absolute;
+    top:0;
+    left:50%;
+    padding:0 20px;
+    transform:translate(-50%,-50%);
+    background-color:black;
+    border-radius: 20px;
+    text-align:center;
+  }
+  
+  form > div > img{
+    filter:invert(1);
+    width:100px;
+  }
+  
+  form > input,
+  form > textarea {
+    padding: 12px;
+    margin: 23px auto;
+    color: #ddd;
+    display: block;
+    width: 57vw;
+    background: none;
+    border: none;
+    border-bottom: 3px white solid;
+    outline: none;
+
+    
+  }
+  
+  form > textarea{
+    height:100px;
+    resize:none;
+  }
+  
+  form > input[type="submit"] {
+    max-width: 20vw;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    transition: 0.35s;
+    margin-left: 300px;
+    
+  }
+
+  #formm{
+    box-sizing: border-box;
+    padding-top: 240px;
+  }
+  #formm p{
+    color: #fff;font-size: 22px;
+  }
+  #formm h1{
+    color: #fff;
+  }
+  /* Extra small devices (phones, 600px and down) */
+
+
+#konk{
+  text-align: center;
+}

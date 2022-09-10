@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+body{
+    background: url(../image/bg3.jpg) fixed center no-repeat;
+    background-size: cover;
+
+
+
+
+}
+#intro{
+    margin: 0;
+    padding: 0;
+    .cart1{
+        
+        img{
+            width: 100%;
+            height: 100vh;
+           object-fit: cover;
+    
+            
+        }
+    }
+   
+}
+#main1{
+    padding-top: 10rem;
+    .cart{
+        margin-left: 6rem;
+
+        .title{
+            color: white;
+        }
+        .desc{
+            width: 20rem;
+            p{
+                font-size: 12px;
+                color: white;
+            }
+        }
+    }
+}
+#main2{
+  
+    z-index: 30;
+   
+    h1{
+        margin-top: 11rem;
+        margin-left: 15rem;
+
+    }
+   
+    .imgrl{
+        margin-top: 100px;
+        background: url("../image/main2.jpeg") center center  ;
+        width: 80%;
+        height: 50vh;
+        background-size:cover ;
+
+    }
+}
+#main3{
+    padding-top: 10rem;
+    
+    .cart{
+        margin-left: 5rem;
+        .title{
+            color: white;
+        }
+        .desc{
+            width: 20rem;
+            p{
+                line-height: 25px;
+                font-size: 12px;
+                color: white;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 400px) {
+
+
+    #main4{
+        img{
+            margin-left: 130px;
+        }
+    }
+   
+}
+@media only screen and (max-width: 600px) {
+
+
+    #main4{
+        img{
+            margin-left: 170px;
+        }
+    }
+    
+}
+#main4{
+    margin-top: 130px;
+}

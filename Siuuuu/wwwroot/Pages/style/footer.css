@@ -1,0 +1,88 @@
+ul li{
+    list-style: none;
+    
+}
+li a{
+    text-decoration: none;
+}
+#one a{
+    font-size: 17px;
+    color: #bfa279;
+    opacity: 0.6s;
+}
+#one a:hover{
+    text-decoration: underline;color: gray;
+    
+    
+}
+#ps1{
+    font-weight: 900;
+}
+#ps2{
+    font-weight: 900;margin-left: 20px;color: white;
+}
+#ps3{
+    margin-left: 20px;font-weight: bold;
+}
+.iconn{
+    display: flex;
+    margin-top: 15px;
+}
+.iconn p{
+    font-weight: 900;
+}
+body{
+    background-color: black;
+}
+@media screen and (max-width:953px) {
+   
+    html{
+      font-size: 12px;
+    }
+   
+
+   
+  }
+  @media screen and (min-width:953px) {
+
+    .carttt{
+        margin-left: 120px;}
+  
+  }
+.timee{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.iconn:hover{
+    color: #bfa279;
+}
+p{
+    color: white;
+}
+#foott{
+    padding-top: 150px;
+}
+.iconn i{
+    color: white;
+}
+.iconn :hover{
+    color: #bfa279;
+}
+#one li{
+    line-height: 32px;font-weight: 600;
+
+}
+#one i{
+    color: white;
+}
+#one h5{
+    color: white;font-family: 'Times New Roman', Times, serif;
+}
+#one i:hover{
+    color: aqua;
+}
+#one{
+    margin-left: -30px;
+}

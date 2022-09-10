@@ -1,0 +1,105 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cart{
+    
+    box-shadow: rgba(255, 255, 255, 0.548) 5px 5px;
+    margin: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.cart img{
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease;
+}
+
+.cart .cart_content{
+    transform: translateY(120px);
+    height: 110px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.6 ease;
+    margin-top: -100px;
+}
+
+.cart:hover img{
+    opacity: 0.9;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.cart:hover .cart_content{
+    transform: translateY(-120px);
+    opacity: 1;
+}
+
+/*# sourceMappingURL=karoke.css.map */
+body{
+
+    background:url(../image/background.jpg) center center no-repeat fixed ;
+    background-size: cover;
+    height: 300vh;
+  
+  
+  }
+  #ssssssss{
+    margin-top: -10px;
+  }
+  #siuuuuuuuuu p{
+    color: white;
+  }
+#hhh{
+  color: white;margin-top: 140px;text-align: center;font-weight: 900;
+}
+@media screen and (min-width:753px) {
+  #pepe{
+    padding: 0;
+  }
+
+
+}
+#cv1 p{
+  color: white;font-size: 16px;margin-top: 45px;
+}
+#cv1 h1{
+  color: white;font-size: 51px;text-align: center;
+}
+#cv1{
+  padding-top: 200px;
+  padding-bottom: 80px;
+}
+.newspaper {
+  column-count: 2;
+  column-gap: 40px;
+}
+@media only screen and (max-width: 500px) {
+  .newspaper{
+    column-count: 1;
+  }
+}

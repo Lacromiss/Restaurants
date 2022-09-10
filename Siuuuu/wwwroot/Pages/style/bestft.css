@@ -1,0 +1,126 @@
+#imgsl img{
+    width: 60%;
+}
+li{
+    list-style: none;
+    
+}
+#f1{
+    color: #bfa279;
+    text-decoration: none;
+}
+#f1:hover{
+    color: gray;
+    text-decoration: underline;
+
+}
+.bt{
+    border-bottom: 3px white solid;
+    width:440px;
+    height: 15px;
+    margin-top: -3px;
+ 
+   
+}
+
+
+#mondagg{
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    width: 300px;
+}
+#mondaggg{
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    width: 440px;
+    text-align: center;
+}
+.asadsas a{
+    color: wheat;
+    text-decoration: none;
+}
+.asadsas a:hover{
+    color: #bfa279;
+    text-decoration: none;
+}
+.asadsas p{
+    font-size: 16px;
+}
+.asadsas li{
+    width: 300px;
+}
+
+
+#hhhhhhhhhh{
+    margin-top: 40px;
+}
+#hgdda{
+    color: white;
+}
+#pop{
+    color: white;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+
+}
+#pop img:hover{
+    background-color: aquamarine;
+    border-radius: 30.5px;
+}
+#cozomorino{
+    color: white;
+}
+footer{
+    padding-top: 130px;
+}
+.cart{
+    margin: 0;
+    width: 100%;
+
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+}
+.day{
+    justify-content: space-between;
+    width: 360px;
+}
+@media only screen and (max-width: 340px) {
+    .day{
+        width: 270px;
+    }
+    #mondaggg{
+        width: 30px;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+    #mondagg{
+        width: 50px;
+    }
+    #flss a{
+        width: 270px;
+
+    }
+    .bt{
+    width: 100px;
+    margin: 0;
+    }
+    #pop{
+        width: 240px;
+    }
+
+}
+@media only screen and (min-width: 200px) {
+    #flss {
+      margin-left: -38px;
+    }
+    .asadsas li{
+        width: 200px;
+    }
+  }
+  

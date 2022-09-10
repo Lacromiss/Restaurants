@@ -1,0 +1,114 @@
+html, body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+@media only screen and (min-width: 360px) {
+  .flow-textlarg {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 394px) {
+  .flow-textlarg {
+    font-size: 2.754rem;
+  }
+}
+@media only screen and (min-width: 428px) {
+  .flow-textlarg {
+    font-size: 2.808rem;
+  }
+}
+@media only screen and (min-width: 462px) {
+  .flow-textlarg {
+    font-size: 2.862rem;
+  }
+}
+@media only screen and (min-width: 496px) {
+  .flow-textlarg {
+    font-size: 2.916rem;
+  }
+}
+@media only screen and (min-width: 530px) {
+  .flow-textlarg {
+    font-size: 2.97rem;
+  }
+}
+@media only screen and (min-width: 564px) {
+  .flow-textlarg {
+    font-size: 3.024rem;
+  }
+}
+@media only screen and (min-width: 598px) {
+  .flow-textlarg {
+    font-size: 3.078rem;
+  }
+}
+@media only screen and (min-width: 632px) {
+  .flow-textlarg {
+    font-size: 3.132rem;
+  }
+}
+@media only screen and (min-width: 666px) {
+  .flow-textlarg {
+    font-size: 3.186rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .flow-textlarg {
+    font-size: 3.24rem;
+  }
+}
+@media only screen and (min-width: 734px) {
+  .flow-textlarg {
+    font-size: 3.294rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flow-textlarg {
+    font-size: 3.348rem;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .flow-textlarg {
+    font-size: 3.402rem;
+  }
+}
+@media only screen and (min-width: 836px) {
+  .flow-textlarg {
+    font-size: 3.456rem;
+  }
+}
+@media only screen and (min-width: 870px) {
+  .flow-textlarg {
+    font-size: 3.51rem;
+  }
+}
+@media only screen and (min-width: 904px) {
+  .flow-textlarg {
+    font-size: 3.564rem;
+  }
+}
+@media only screen and (min-width: 938px) {
+  .flow-textlarg {
+    font-size: 3.618rem;
+  }
+}
+@media only screen and (min-width: 972px) {
+  .flow-textlarg {
+    font-size: 3.672rem;
+  }
+}
+@media only screen and (min-width: 1006px) {
+  .flow-textlarg {
+    font-size: 3.726rem;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .flow-textlarg {
+    font-size: 3.78rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .flow-textlarg {
+    font-size: 2.7rem;
+  }
+}/*# sourceMappingURL=sizebig.css.map */

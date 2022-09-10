@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../image/background.jpg) center center fixed;
+    background-size:cover ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ 
+
+
+
+  .cont {
+    position: relative;
+    text-align: center;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+    z-index: -55555;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #introo{
+    padding-top: 200px;
+  }
+  
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .cont{
+    width: 93%;
+  }
+  p{
+    font-size: 16px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { .cont{
+  width: 93%;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cont{
+    width: 93%;
+  }
+ 
+}
+#who1 p{
+  color: white;font-weight: 800;
+  font-size: 15px;
+
+}
+#who1 h1{
+  color: white;
+}
+#who1{
+  padding-top: 150px;
+}
+#introo h1{
+  font-size: 50.5px;
+  color: white;
+}
+.cartttt{
+  width: 730px;
+}
+#siuuuuuuuuuuuuuuuu{
+  line-height: 28px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  
+}
+@media only screen and (max-width: 600px) { 
+
+
+#who1{
+  padding-top: 30px;
+}
+#introo{
+  padding-top: 30px;
+}
+
+
+
+}
+.newspaper {
+  column-count: 2;
+  column-gap: 40px;
+  margin: 25px auto 0 auto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 29px;
+}
+#cv1 p{
+  color: white;font-size: 16px;width: 70%;margin: 45 auto 0 auto;
+}
+#cv1 h1{
+  color: white;font-size: 30px;text-align: center;
+}
+#cv1{
+  padding-top: 180px;
+}
+@media only screen and (max-width: 600px) { 
+  .newspaper{
+    column-count: 1;
+  }
+  #cv1{
+    padding-top: 50px;
+  }
+}

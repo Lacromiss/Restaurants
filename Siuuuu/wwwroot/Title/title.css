@@ -1,0 +1,61 @@
+/* =============== *
+Rainbow Text
+Clip patht scrolling background. 
+Just swap out background image to change pattern.
+ * ==========*/
+
+
+ .rainbow-power {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/gilbertbakeroriginalcolors_copy.jpg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    overflow: hidden;
+    text-align: center;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    animation: BackgroundAnimated 30s linear infinite;
+  }
+  
+  @keyframes BackgroundAnimated {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  
+  
+  
+  
+  #rainbovv {
+    font-size: 5vw;
+    letter-spacing: 2px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+  }
+  
+  @media (max-width: 980px) {
+    #rainbovv {
+        font-size: 30px;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0;
+    }
+    /* Slow down animation on mobile as speed is tied in with scale
+       of cleip path text */
+  
+     .rainbow-power {
+    animation: BackgroundAnimated 50s linear infinite;
+  }
+    
+  }

@@ -1,0 +1,114 @@
+html, body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+@media only screen and (min-width: 360px) {
+  .musiiik {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 394px) {
+  .musiiik {
+    font-size: 2.754rem;
+  }
+}
+@media only screen and (min-width: 428px) {
+  .musiiik {
+    font-size: 2.808rem;
+  }
+}
+@media only screen and (min-width: 462px) {
+  .musiiik {
+    font-size: 2.862rem;
+  }
+}
+@media only screen and (min-width: 496px) {
+  .musiiik {
+    font-size: 2.916rem;
+  }
+}
+@media only screen and (min-width: 530px) {
+  .musiiik {
+    font-size: 2.97rem;
+  }
+}
+@media only screen and (min-width: 564px) {
+  .musiiik {
+    font-size: 3.024rem;
+  }
+}
+@media only screen and (min-width: 598px) {
+  .musiiik {
+    font-size: 3.078rem;
+  }
+}
+@media only screen and (min-width: 632px) {
+  .musiiik {
+    font-size: 3.132rem;
+  }
+}
+@media only screen and (min-width: 666px) {
+  .musiiik {
+    font-size: 3.186rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .musiiik {
+    font-size: 3.24rem;
+  }
+}
+@media only screen and (min-width: 734px) {
+  .musiiik {
+    font-size: 3.294rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .musiiik {
+    font-size: 3.348rem;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .musiiik {
+    font-size: 3.402rem;
+  }
+}
+@media only screen and (min-width: 836px) {
+  .musiiik {
+    font-size: 3.456rem;
+  }
+}
+@media only screen and (min-width: 870px) {
+  .musiiik {
+    font-size: 3.51rem;
+  }
+}
+@media only screen and (min-width: 904px) {
+  .musiiik {
+    font-size: 3.564rem;
+  }
+}
+@media only screen and (min-width: 938px) {
+  .musiiik {
+    font-size: 3.618rem;
+  }
+}
+@media only screen and (min-width: 972px) {
+  .musiiik {
+    font-size: 3.672rem;
+  }
+}
+@media only screen and (min-width: 1006px) {
+  .musiiik {
+    font-size: 3.726rem;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .musiiik {
+    font-size: 3.78rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .musiiik {
+    font-size: 2.7rem;
+  }
+}/*# sourceMappingURL=homeTxtSize.css.map */
