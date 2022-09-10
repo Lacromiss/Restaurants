@@ -1,0 +1,41 @@
+﻿@using Siuuuu.Models.HomePage
+@model HomeImageOne
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<div class="cont" style="width: 100%; height:130vh;background: #5f2c82;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <div class="container">
+
+        <h1 class="rainbow-power" id="rainbovv" style="margin-left:40px">Update Home page image1</h1>
+
+
+    </div>
+    <div class="qutu" style="margin:80px 0 0 380px">
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label asp-for="Photo" style="color:white;font-size:25px"></label>
+                <br />
+                <input asp-for="Photo" style="width:80%;background: none;color:white;font-size:20px;font-weight:600" accept="image/*" /><br />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Txt" style="color:white;font-size:25px"></label><br />
+
+                <input asp-for="Txt" style="width:80%; height: 80px;background: none;color:white;font-size:16px;font-weight:600 " /><br />
+                <span asp-validation-for="Txt" class="text-danger"></span>
+            </div>
+
+
+            <div class="mb-3">
+                <button type="submit" value="update" class="btn btn-success">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

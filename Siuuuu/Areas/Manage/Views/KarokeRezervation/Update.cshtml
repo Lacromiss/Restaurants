@@ -1,0 +1,42 @@
+﻿@using Siuuuu.Models.Karoke
+@model KarokeRezerevation
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="cont" style="width: 100%; height:130vh;background-color:lightgray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h6 class="rainbow-power" style="text-align:center; font-size:43px; width:100%;color:black;font-weight:600 ">Update Karoke Information</h6>
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-7">
+                <form style="width:100%;margin-top:10px" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" style="color:black" asp-for="Title" class="form-label"></label>
+                        <input asp-for="Title" type="text" style="width:100%;background-color:#73879c;color:white;font-weight:600; border: 2px black solid" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <span asp-validation-for="Title"></span>
+                    </div>
+                        <div class="mb-3">
+                        <label for="exampleInputEmail1" style="color:black" asp-for="Link" class="form-label"></label>
+                        <input asp-for="Link" style="width:100%;background-color:#73879c;color:white;font-weight:600; border: 2px black solid" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <span asp-validation-for="Link"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" style="color:black" asp-for="Description" class="form-label"></label>
+                        <input asp-for="Description" style="width:100%;height:180px;background-color:#73879c;color:white;font-weight:600; border: 2px black solid" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <span asp-validation-for="Description"></span>
+                    </div>
+                
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <div class="col-lg-1"></div>
+
+        </div>
+    </div>
+    <
+</div>

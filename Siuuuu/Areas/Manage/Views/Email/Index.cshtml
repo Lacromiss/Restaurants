@@ -1,0 +1,138 @@
+﻿@using Siuuuu.Vm
+@model SendAndReadEmailVm
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+
+
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Menu  page </h2>
+
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Settings 1</a>
+                                    <a class="dropdown-item" href="#">Settings 2</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+
+                                    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Fullnamee</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Kontent</th>
+                                                <th>Send Time</th>
+                                                <th>Go answer </th>
+                                                <th>Delete</th>
+
+                                            </tr>
+                                        </thead>
+                                        @foreach (var item in Model.email)
+                                        {
+
+
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>@item.FullName</td>
+                                                    <td>@item.EmailAdress</td>
+                                                    <td>@item.Phone</td>
+                                                    <td>
+
+                                                        <button class="btn btn-primary" data-target="my-dialog" data-modeltrigger>
+                                                            Read
+                                                        </button>
+                                                        <dialog data-name="my-dialog">
+                                                            <header>
+                                                                <h2>@item.EmailAdress Message</h2>
+                                                                <button class="btn btn-icon" data-target="my-dialog" data-modeltrigger>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                                    </svg>
+                                                                </button>
+                                                            </header>
+                                                            <main>
+                                                                <p>@item.Kontent</p>
+
+                                                            </main>
+                                                            <footer>
+                                                                <button class="btn btn-primary-outline" data-target="my-dialog" data-modeltrigger>
+                                                                    close
+                                                                </button>
+                                                            </footer>
+                                                        </dialog>
+
+                                                    </td>
+                                                    <td>@item.dateTime</td>
+
+
+
+
+
+                                                    <td>
+                                                        <a asp-action="SendMail" asp-controller="Email" asp-area="Manage">
+                                                            Cavab ver
+
+                                                        </a>
+
+
+
+
+                                                    </td>
+                                                       <td>
+                                                        <a asp-action="Delete" asp-area="Manage" asp-controller="Email" asp-route-Id="@item.Id" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+
+                                                    </td>
+
+
+
+                                                </tr>
+
+                                            </tbody>
+                                        }
+
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
