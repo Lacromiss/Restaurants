@@ -1,0 +1,49 @@
+﻿@using Siuuuu.Vm
+@model PageCustomerVm
+@{
+    ViewData["Title"] = "Index";
+}
+
+   <section id="Cyscv1">
+        <div class="Cuscontainer container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                @foreach (var item in Model.customerJobAndCareers)
+               {
+                   
+               
+                <div class="col-lg-10">
+                    <h1 style="color: white; text-align:center">@item.Title
+
+                    </h1>
+                    <p class="Cusnewspaper">@item.Description
+                       
+                    </p>
+                </div>
+                }
+                                <div class="col-lg-1"></div>
+
+            </div>
+        </div>
+    </section>
+<section id="main3"><div class="container">
+    <div class="row">
+        @foreach (var item in Model.customeHumen)
+       {
+           
+       
+        <div class="col-lg-4 col-md-12">
+            <div class="Cuscart">
+                <img src="~/Pages/image/@item.ImgUrl" alt="" width="350px">
+                <div class="cart_content ">
+                    <p>@item.insta</p>
+                   
+                </div>
+            </div>
+
+
+        </div>
+       }
+     
+    </div></section>
+

@@ -1,0 +1,272 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Siuuuu.Models.Account
+@inject UserManager<AppUser> userManager
+@inject SignInManager<AppUser> signInManager
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Gentelella Alela! | </title>
+
+    <!-- Bootstrap -->
+    <link href="~/UltimateAdmin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/UltimateAdmin/modalll.css rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/UltimateAdmin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/UltimateAdmin/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/UltimateAdmin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="~/UltimateAdmin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="~/UltimateAdmin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/UltimateAdmin/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="~/UltimateAdmin/build/css/custom.min.css" rel="stylesheet">
+        <link href="~/UltimateAdmin/build/css/custom.min.css" rel="stylesheet">
+
+
+
+        <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="~/UltimateAdmin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/UltimateAdmin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/UltimateAdmin/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/UltimateAdmin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    
+    <link href="~/UltimateAdmin/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/UltimateAdmin/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="~/UltimateAdmin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="~/UltimateAdmin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="~/UltimateAdmin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="~/UltimateAdmin/build/css/custom.min.css" rel="stylesheet">
+    <link href="~/Title/title.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+    
+
+
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="~/Ultimate/Admin/indexin/images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Mustafa Qasimzade</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeBestFood" >Beststaller Food</a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeIcon" >Icons</a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeImageOne" >Kontent image1 </a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeImageTwo" >Kontent image2</a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeTxt1" >Kontent text 1</a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeTxt2" >Kontent text 2</a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="HomeMainImage" >Main image </a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="PageHomeManifest" >Manifest </a></li>
+                   
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> Karoke Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="KarokeImage">Karoke Image</a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="KarokeConcept">Karoke Konsept</a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="KarokeInformation">Karoke Information</a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="KarokeQuestion">Karoke question-answer</a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="KarokeRezervation">Karoke Reservation</a></li>
+                      
+                     
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> Curious Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CuriousDescription">Description </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CDesctwo">Description two </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CDescthree">Description three </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CDescfour">Description four </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CuriousImageTwo">Image two </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CuriousThree">Image three </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CuriousImage">Image one </a></li>
+                      <li><a  asp-area="Manage" asp-action="Index" asp-controller="CuriourImagefour">Image four </a></li>
+                     
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i>Menu Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="MenuProduct">Menu items</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Cv Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="Cv">Humans Cv</a></li>
+                     
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>Customer Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="MyCustomerr">Customers</a></li>
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="CustomerCarieer">Customer desc</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bug"></i> Reservation Pages<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="Booking">Check Karoke Reservation</a></li>
+                      <li><a asp-action="Family" asp-area="Manage" asp-controller="Booking">Check Family Reservation</a></li>
+                      <li><a asp-action="Read" asp-area="Manage" asp-controller="Booking">Check Pro Reservation</a></li>
+
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-windows"></i> Contact Us <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="Email">Humans message </a></li>
+
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-sitemap"></i> Buy Page <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a asp-action="Index" asp-area="Manage" asp-controller="Buy">shop products </a></li>
+                       
+                    </ul>
+                  </li>                  
+                  <li><a asp-action="SendMail" asp-controller="TopMessage"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+                             <a  asp-action="LogOut" asp-controller="Account" asp-area="" data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+       
+        <!-- /top navigation -->
+
+@RenderBody()
+       
+
+   
+  
+
+    <!-- Custom Theme Scripts -->
+        <script src="~/UltimateAdmin/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/UltimateAdmin/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/UltimateAdmin/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/UltimateAdmin/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/UltimateAdmin/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/UltimateAdmin/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/UltimateAdmin/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/UltimateAdmin/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/UltimateAdmin/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/UltimateAdmin/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/UltimateAdmin/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/UltimateAdmin/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/UltimateAdmin/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/UltimateAdmin/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/UltimateAdmin/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/UltimateAdmin/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/UltimateAdmin/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/UltimateAdmin/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/UltimateAdmin/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/UltimateAdmin/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/UltimateAdmin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/UltimateAdmin/vendors/moment/min/moment.min.js"></script>
+    <script src="~/UltimateAdmin/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="~/UltimateAdmin/build/js/custom.min.js"></script>
+    <script src="~/Pages/js/animation.js"></script>
+
+    <script src="~/UltimateAdmin/modal.js"></script>
+
+
+
+
+
+
+
+      
+
+
+
+  </body>
+</html>

@@ -1,0 +1,142 @@
+﻿@using Siuuuu.Vm
+@model WhoPageVm
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="introo">
+    @foreach (var item in Model.curiors)
+   {
+       
+   
+    <div class="cont">
+        <img src="~/Pages/image/@item.ImgUrl" alt="Snow" style="width:87%;">
+        <div class="centered">
+            <h1 class="musiiik" style="font-size: 40px;">@item.Txt
+
+            </h1>
+        </div>
+        </div>
+   }
+
+</section>
+  <section id="cv1">
+        <div class="container">
+            <div class="row">
+                    @foreach (var item in Model.curiorDescription1s){
+
+                <div class="col-lg-12">
+                    <h1>@item.Title
+                    </h1>
+                    <p class="Whonewspaper  ">@item.Description
+                    </p>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="introo">
+        <div class="cont">
+            @foreach (var item in Model.curiorOnes)
+            {
+                
+            
+            <img src="~/Pages/image/@item.ImgUrl" alt="Snow" style="width:87%;">
+            <div class="centered">
+                <h1 class="musiiik" style="font-size: 40px;">@item.Txt
+
+                </h1>
+            </div>
+            }
+            </div>
+
+    </section>
+<section id="cv1">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.curiorDescription2s)
+            {
+                
+            
+            <div class="col-lg-12">
+                <h1>@item.Title
+
+                </h1>
+                <p class="Whonewspaper  ">@item.Description
+                 
+                </p>
+            </div>
+            }
+
+        </div>
+    </div>
+</section>
+<section id="introo">
+    <div class="cont">
+        @foreach (var item in Model.curiorTwos)
+       {
+           
+       
+        <img src="~/Pages/image/@item.ImgUrl" alt="Snow" style="width:87%;">
+        <div class="centered">
+            <h1 class="musiiik" style="font-size: 40px;">@item.Txt
+
+            </h1>
+        </div>
+       }
+        </div>
+
+</section>
+    <section id="cv1">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model.curiorDescription3s)
+               {
+                   
+               
+                <div class="col-lg-12">
+                    <h1>@item.Title
+
+                    </h1>
+                    <p class="Whonewspaper  "> @item.Description
+                    </p>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="introo">
+        <div class="cont">
+            @foreach (var item in Model.curiorThree)
+           {
+               
+           
+            <img src="~/Pages/image/@item.ImgUrl" alt="Snow" style="width:87%;">
+            <div class="centered">
+                <h1 class="musiiik" style="font-size: 40px;">@item.Txt
+
+                </h1>
+            </div>
+           }
+            </div>
+
+    </section>
+       <section id="who1">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model.curiorDescription4s)
+               {
+                   
+               
+                <div class="col-lg-12">
+                    <h1  >@item.Title
+                    </h1>
+                    <br>
+                    <p id="siuuuuuuuuuuuuuuuu">@item.Description
+                    </p>
+                </div>
+                }
+            </div>
+        </div>
+       </section>
+       

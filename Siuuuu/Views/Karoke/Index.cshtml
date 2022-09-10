@@ -1,0 +1,84 @@
+﻿@using Siuuuu.Vm
+@model KarokePageVm
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+    <section id="introo">
+        <div class="Karokecont">
+            @foreach (var item in Model.karokeImage)
+           {
+                           <img src="~/Pages/image/@item.ImgUrl" alt="Snow" style="width:100%;">
+
+               
+           }
+
+            </div>
+
+    </section>
+    <section id="Karokemain1">
+        <div class="container">
+            <div class="row">
+                <div class="Karokecartt">
+                    @foreach (var item in Model.karokeInformation)
+                   {
+                       
+                   
+                    <div class="col-lg-12  w-100 ">
+                       <p style="font-size: 30px; font-weight:400 ">@item.Title
+                    </p>
+                    </div><br>
+                    <div class="col-lg-12  w-100 ">
+                        <p>@item.Description1</p> <br>
+                        <span>
+                            @item.Description2
+
+                        </span>
+                    </div>
+                    }
+                    @foreach (var item in Model.karokeConcept)
+                   {
+                       
+                   
+                    <div class="col-lg-12 w-100 mt-5  ">
+                        <h1>@item.Title</h1>
+                        <br>
+                        <h6>@item.Subtitle
+
+                        </h6><br>
+
+                        <p> @item.Description1<br><br><span> @item.Description2</span></p>
+                    </div>
+                    }
+                    <div class="col-lg-12 mt-5 ">
+                        <h1>Rezervasyon
+                        </h1><br>
+                        <p>Sifariş etmək üçün aşağıdakı linkə daxil olmaq kifayətdir: KARAOKE . Gün ərzində sifariş
+                            etmək üçün restorana zəng edin və mövcudluğu öyrənin.</p><br>
+                    </div>
+                    <div class="col-lg-12">
+                        <h3>TEZ-TEZ VERİLƏN SUALLAR
+                        </h3>
+                        
+                    </div>
+                    @foreach (var item in Model.karokeQuestion)
+                   {
+                       
+                   
+                    <div class="col-lg-12">
+                        <h5>@item.Question
+                        </h5><br>
+                        <p>@item.Answer
+                            
+
+                        </p>
+                    </div>
+                    }
+                 
+
+
+                </div>
+            </div>
+        </div>
+    </section>

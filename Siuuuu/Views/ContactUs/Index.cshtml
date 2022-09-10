@@ -1,0 +1,33 @@
+﻿@using Siuuuu.Models.Mail
+@model Email
+@{
+    ViewData["Title"] = "Index";
+}
+
+   <section id="formm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div><br><br>
+                <div class="col-lg-8"><h1>
+                    Əlaqə
+                </h1>
+            
+                <p style="font-size: 21px;">Bizimlə əlaqə saxlayın: sliders@sliders.dk . Restoranların iş saatları ərzində 31322620 nömrəsinə də zəng edə bilərsiniz . İşçilərlə əlaqə saxlamaq üçün əvvəlcə Nørrebro üçün 1, sonra 1 və Vesterbro üçün 2 düyməsini basın.</p>
+            
+            
+            </div>
+      
+        <form id="mustikkk" method="post" >
+
+            <input asp-for="FullName" type="text" placeholder="Name (required)" >
+            <span class="text-danger" asp-validation-for="FullName"></span>
+           
+            <input asp-for="EmailAdress" type="text" placeholder="Return address (required)" >
+            <span class="text-danger" asp-validation-for="EmailAdress"></span>
+            <input asp-for="Phone"  placeholder="Number" >
+            <span class="text-danger" asp-validation-for="Phone" class="text-danger" ></span>
+            <textarea asp-for="Kontent" placeholder="Subject (required)" ></textarea>
+            <span class="text-danger" asp-validation-for="Kontent"></span>
+            <input type="submit" value="Send">
+        </form>
+    </section>

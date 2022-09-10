@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Siuuuu.DAL;
 using Siuuuu.Models;
+using Siuuuu.Vm;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,27 +13,32 @@ namespace Siuuuu.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomePageVm homePageVm = new HomePageVm
+            {
+                homeIcon = _context.homeIcons.ToList(),
+                homeImageOne = _context.homeImageOnes.ToList(),
+                homeImageTwo = _context.homeImageTwos.ToList(),
+                homeTxt1 = _context.homeTxt1s.ToList(),
+                homeTxt2 = _context.homeTxt2s.ToList(),
+                homeMainImage = _context.homeMainImages.ToList(),
+                homeManifestDescriptionn = _context.homeManifestDescriptionns.ToList(),
+                food = _context.homeBestFoods.ToList(),
+                descriptionOne = _context.homeDescriptionOnes.ToList(),
+            };
+
+            return View(homePageVm);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

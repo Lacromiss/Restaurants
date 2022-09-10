@@ -1,0 +1,38 @@
+﻿@using Siuuuu.Models.Buy
+@model List<BuyProduct>
+@{
+    ViewData["Title"] = "Index";
+}
+
+ <section style="padding-top: 160px; position:relative;content:"" ">
+     
+      <div class="cart-button" style="position:absolute;right:55px;top:140px">
+          <a asp-action="Basket" asp-controller="Buy">
+    <img src="~/Pages/image/wicker-basket.png" width="30" height="30">
+    
+    <span class="cart-qty cart-counter" style="color:#bfa279;font-weight:700">@ViewBag.kount</span> 
+</a>
+</div>
+    
+    
+    <ul class="cardd-list">
+	@foreach (var item in Model)
+{
+
+        
+
+        <li class="cardd">
+            <a class="cardd-image" href="" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg">
+                <img src="~/Pages/image/@item.ImgUrl" alt="Psychopomp" width="150x" />
+            </a>
+                <h2 style="color:gray">@item.Name</h2>
+                <p style="color:gray">@item.Description</p>
+                <h4 style="color:gray"class="text-danger">Price:@item.Price</h4>
+                            <button class="addtocart" style="background-color:#bfa279;width:160px;height:45px"><a style="color:black;font-size:18px" asp-action="AddBasket" asp-controller="Buy" asp-route-Id="@item.Id"> Add To Cart</a></button>
+
+        </li>
+}
+        
+        
+    </ul>
+</section>

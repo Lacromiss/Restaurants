@@ -1,0 +1,65 @@
+﻿@using Siuuuu.Models.Cv
+@model CvForm
+@{
+    ViewData["Title"] = "CvForm";
+}
+
+<section id="cv1">
+    <div class="container" style="padding-top:25px">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>
+                    İş və Karyera.
+                </h1>
+                <p class="Whonewspaper  ">
+                    Slayder olmaq üçün əlavə əllər tələb olunmur və bizimlə biz bir-birimizə işçi kimi müraciət etmirik. Biz özümüzü bir ailə kimi görürük və bir-birimizlə belə davranırıq. Qoyunları keçilərdən ayıran sənətə sədaqət və məhsula məhəbbətdir; Sliders üzvləri olaraq, ailəmizin hər ikisinə sahib olduğunu qürurla qeyd edirik.
+                    Sliders-də təbəssümlərimiz böyükdür və
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="formm">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-8">
+                <h1 style="text-align:center;color:#bfa279">
+                    HANSI VƏZİFƏ AXTARIRSINIZ?
+                </h1>
+            </div>
+            <div class="col-lg-2" ></div>
+            <div class="col-lg-2"></div>
+
+
+            <div class="col-lg-8" >
+                <form id="mustikkk" method="post" enctype="multipart/form-data">
+
+                    <input asp-for="Name" style="width:100%" type="text" placeholder="Name (required)" required >
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                    <input style="width:100%" asp-for="EmailAdress" type="email" placeholder="Return address (required)" required>
+                    <span class="text-danger" asp-validation-for="EmailAdress"></span>
+                    <input style="width:100%" asp-for="phone" type="number" placeholder="Return Phone number (required)" required>
+                    <span class="text-danger" asp-validation-for="phone"></span>
+                    <select asp-for="Jobb" class="Kontent">
+
+                        <option value="ressam">Ressam</option>
+                        <option value="asbaz">Asbaz</option>
+                        <option value="musiqici">Musiqici</option>
+                    </select>
+                    <span asp-validation-for="Jobb"></span>
+                    <input style="width:100%" asp-for="Pdf" name="Pdf" />
+                    <span asp-validation-for="Pdf"></span>
+    <button type="submit" value="Send">Send</button>
+                </form>
+
+            </div>
+            <div class="col-lg-3" ></div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- ======= Menu Section ======= -->
+<section id="menu" class="menu">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+              <h2>Our Menu</h2>
+              <p style="color: white;font-size: 80px;"> <span style="color: white;">Slider Menu</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+              <li class="nav-item">
+                    <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+                          <h4>Starters</h4>
+                    </a>
+              </li><!-- End tab nav item -->
+
+              <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+                          <h4>Breakfast</h4>
+                    </a><!-- End tab nav item -->
+
+              <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+                          <h4>Lunch</h4>
+                    </a>
+              </li><!-- End tab nav item -->
+
+              <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+                          <h4>Dinner</h4>
+                    </a>
+              </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+              <div class="tab-pane fade active show" id="menu-starters">
+
+                    <div class="tab-header text-center">
+                          <p>Menu</p>
+                          <h3>Starters</h3>
+                    </div>
+
+                    <div class="row gy-5" style="z-index: -500;">
+                     
+                                         @foreach (var item in ViewData["product1"]  as List<Siuuuu.Models.Menu.Product>)
+                        {
+                         
+                          <div class="col-lg-4 menu-item">
+                                <a href="~/Pages/image/@item.LargeImg" class="glightbox"><img src="~/Pages/image/@item.LargeImg" class="menu-img img-fluid" style="150px" alt=""></a>
+                                <h4>@item.Name</h4>
+                                <p class="ingredients">
+                                      @item.Description
+                                </p>
+                                <p class="price">
+                                      $@item.Price
+                                </p>
+                          </div><!-- Menu Item -->
+
+                          }
+                    </div>
+              </div><!-- End Starter Menu Content -->
+
+              <div class="tab-pane fade" id="menu-breakfast">
+
+                    <div class="tab-header text-center">
+                          <p>Menu</p>
+                          <h3>Breakfast</h3>
+                    </div>
+
+                    <div class="row gy-5">
+                        
+                                         @foreach (var item in ViewData["product"]  as List<Siuuuu.Models.Menu.Product>)
+                        {
+                         
+                          <div class="col-lg-4 menu-item">
+                                <a href="~/Pages/image/@item.LargeImg" class="glightbox"><img src="~/Pages/@item.LargeImg class="menu-img img-fluid" style="150px" alt=""></a>
+                                <h4>@item.Name</h4>
+                                <p class="ingredients">
+                                    @item.Description
+                                </p>
+                                <p class="price">
+                                      $@item.Price
+                                </p>
+                          </div><!-- Menu Item -->
+                          }
+                
+
+                      
+
+                    </div>
+              </div><!-- End Breakfast Menu Content -->
+
+              <div class="tab-pane fade" id="menu-lunch">
+
+                    <div class="tab-header text-center">
+                          <p>Menu</p>
+                          <h3>Lunch</h3>
+                    </div>
+
+                    <div class="row gy-5">
+                                       @foreach (var item in ViewData["product2"]  as List<Siuuuu.Models.Menu.Product>)
+                        {
+                         
+                              
+
+
+                          <div class="col-lg-4 menu-item">
+                                <a href="~/Pages/image/@item.LargeImg" class="glightbox"><img src="~/Pages/image/@item.LargeImg" class="menu-img img-fluid" style="150px" alt=""></a>
+                                <h4>@item.Name</h4>
+                                <p class="ingredients">
+                                     @item.Description
+                                </p>
+                                <p class="price">
+@item.Price                                </p>
+                          </div><!-- Menu Item -->
+                          }
+
+                    </div>
+              </div><!-- End Lunch Menu Content -->
+
+              <div class="tab-pane fade" id="menu-dinner">
+
+                    <div class="tab-header text-center">
+                          <p>Menu</p>
+                          <h3>Dinner</h3>
+                    </div>
+
+                    <div class="row gy-5">
+                                             @foreach (var item in ViewData["product3"]  as List<Siuuuu.Models.Menu.Product>)
+                        {
+                         
+                            
+
+                          <div class="col-lg-4 menu-item">
+                                <a href="~/Pages/assets/menu/menu-item-1.png" class="glightbox"><img src="~/Pages/image/@item.LargeImg" class="menu-img img-fluid" style="150px" alt=""></a>
+                                <h4>@item.Name</h4>
+                                <p class="ingredients">
+                                     @item.Description
+                                </p>
+                                <p class="price">
+                                      $@item.Price
+                                </p>
+                          </div><!-- Menu Item -->
+                          }
+                  
+
+                    </div>
+              </div><!-- End Dinner Menu Content -->
+
+        </div>
+
+    </div>
+</section><!-- End Menu Section -->

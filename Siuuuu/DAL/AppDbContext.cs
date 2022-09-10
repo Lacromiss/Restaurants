@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using RestorauntWebAppp.Models.Buy;
+using Siuuuu.Models.Buy;
 using Siuuuu.Models.Account;
 using Siuuuu.Models.Adres;
 using Siuuuu.Models.Booking;

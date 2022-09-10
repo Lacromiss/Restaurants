@@ -1,0 +1,59 @@
+﻿@using Siuuuu.Models.Odemek
+@model Detail
+@{
+    Layout= null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/Pages/style/paid.css">
+</head>
+<body>
+    <form method="post" asp-action="Paid" asp-controller="Adres">
+    <div class="container">
+  
+        <h1>Payment form</h1>
+        
+        <span class="fieldRow">
+          <input asp-for="Name" id="name"  />
+          <label  for="name">First name</label>
+        </span>
+        
+        <span class="fieldRow">
+          <input asp-for="Surname" id="surname"  />
+          <label for="surname">Last name</label>
+        </span>
+        
+        <div class="blank_space">
+          <span class="fieldRow credit_card">
+            <input asp-for="CartNum" id="cc" class="credit_card_number" />
+            <label for="cc">Credit card number</label>
+            <div class="zoomBtn">ZOOM</div>
+            <div class="closeBtn"><i class="fa fa-times"></i></div>
+          </span> 
+        </div>
+      
+        <span class="fieldRow col2">
+          <input asp-for="Cvv" id="cvv"  placeholder="XXX" />
+          <label for="cvv">CVV</label>
+         </span>
+       
+         <span class="fieldRow col2 last">
+          <input asp-for="Datetm"   />
+         </span>
+        
+        <button type="submit" >PAY NOW</button>
+      
+      </div>
+      </form>
+      <div class="overlay"></div>
+      <script src="~/Pages/js/jquery-3.6.0.min.js"></script>
+      <script src="~/Pages/js/paidjs.js"></script>
+      
+      
+</body>
+</html>

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RestorauntWebAppp.Models.Buy
+namespace Siuuuu.Models.Buy
 {
     public class BuyProduct
     {
