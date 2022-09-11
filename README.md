@@ -1,3 +1,3 @@
 # Restaurants
-     <img src="~/Images/home" alt="">
+     <img src="./Images/home" alt="">
 
