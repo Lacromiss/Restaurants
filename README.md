@@ -1,3 +1,3 @@
 # Restaurants
-     <img src="home.png" alt="">
+![CHEESE!](home.png)
 
