@@ -1,3 +1,3 @@
 # Restaurants
-![CHEESE!](~/Images/home.png)
+![CHEESE!](../Images/home.png)
 
